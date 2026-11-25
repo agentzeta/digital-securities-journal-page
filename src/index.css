@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-paper: #FBF9F5;
+  --color-paper-warm: #F3EFE6;
+  --color-paper-border: #E2DBD0;
+  --color-ink: #1C1917;
+  --color-ink-muted: #57534E;
+  --color-lapis: #1E3A8A;
+  --color-bronze: #78350F;
+}
+
+@layer base {
+  html {
+    background-color: #FBF9F5;
+    color: #1C1917;
+    font-family: "Source Serif 4", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+    text-wrap: balance;
+  }
+}
+
+.drop-cap::first-letter {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.35rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.85;
+  margin-right: 0.65rem;
+  margin-top: 0.25rem;
+  color: #1C1917;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

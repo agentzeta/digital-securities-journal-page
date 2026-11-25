@@ -1,0 +1,6 @@
+{
+  "name": "Digital Securities Journal",
+  "description": "A print and digital publication examining tokenisation, investor rights, asset servicing, settlement finality, privacy-preserving compliance, and the infrastructure of institutional digital finance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

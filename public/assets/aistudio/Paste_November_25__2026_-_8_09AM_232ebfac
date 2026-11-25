@@ -1,0 +1,227 @@
+Below is the continuation: expanded AHAs with a clear product / patent / thought-leadership recommendation, executed coordination-prompt outputs, Paper 3, IndiaAI budget, eight remaining SSRN papers in LaTeX, an expanded FML protocol, prior-art tables, and FML patent claims.
+AHA leverage matrix
+AHA	Best leverage	Output needed	Commercial path
+1. Agent safety is a treasury problem	Product + patent	Paper, PRD, patent claims	Agent Treasury Control Plane
+2. Correction capacity is the binding constraint	Thought leadership + product	Article, governance framework	Correction-capacity platform
+3. Accountable coordination is the scarce resource	Thought leadership + product	Article, protocol	Agent Assurance Commons
+4. Sovereignty is negotiable dependence	Thought leadership + product	Article, architecture	Sovereign AI infrastructure
+5. Public goods become more important	Thought leadership + grant	Article, grant proposal	Public-interest AI infrastructure
+6. The next internet bargain is agency	Product + patent	Article, protocol, patent claims	Common Agents Ledger
+7. Reservation conservation is the missing primitive	Patent + product	Patent claims, PRD	Fund Operations Control Plane
+8. Effect reconciliation is the missing primitive	Patent + product	Patent claims, PRD	Effect Reconciliation Engine
+9. Agent treasuries are the missing primitive	Product + patent	Paper, PRD, patent claims	Agent Treasury Control Plane
+10. Fund management is public infrastructure	Thought leadership + product	Article, protocol, patent claims	Fund Management Layer
+
+
+AHA 1: Agent safety is a treasury problem
+Recommendation
+Product + patent.
+Output needed
+- Paper: Autonomous Agent Treasuries
+- PRD: Agent Treasury Control Plane
+- Patent abstract and claims
+- Public demo
+Patent abstract
+text
+A system and method for autonomous agent treasuries is provided. The system receives an agent-initiated financial action request, evaluates the request against a treasury policy, determines reserve availability, applies spend limits, determines whether human approval is required, dispatches the action using an idempotency key, generates a receipt, reconciles the completed effect and generates an evidence record. The system distinguishes reversible local actions from irreversible external effects and applies different controls to each. The system may revoke agent authority, preserve evidence and initiate recovery.
+Core inventive mechanism
+text
+Agent Action Request   → Treasury Policy   → Reserve Check   → Spend Limit Check   → Approval Decision   → Idempotent Dispatch   → Receipt   → Effect Reconciliation   → Evidence Record   → Recovery
+Key claims
+text
+1. A computer-implemented method for autonomous agent treasuries, comprising:    a. receiving an agent-initiated financial action request;    b. evaluating the request against a treasury policy;    c. determining reserve availability;    d. applying one or more spend limits;    e. determining whether human approval is required;    f. dispatching the action using an idempotency key;    g. generating a receipt;    h. reconciling the completed effect; and    i. generating an evidence record.  2. The method of claim 1, wherein the treasury policy distinguishes reversible local actions from irreversible external effects.  3. The method of claim 1, wherein the reserve availability includes an operating reserve, emergency reserve, vendor-payment reserve, investment reserve, compliance reserve or recovery reserve.  4. The method of claim 1, wherein the spend limit includes a daily, weekly, monthly, per-counterparty, per-category or per-action limit.  5. The method of claim 1, wherein the idempotency key prevents duplicate effects.  6. The method of claim 1, wherein the evidence record includes a hash of the request, policy decision, approval decision, receipt and reconciliation result.  7. The method of claim 1, further comprising revoking agent authority and initiating recovery.
+AHA 2: Correction capacity is the binding constraint
+Recommendation
+Thought leadership + product.
+Output needed
+- Article: The Correction-Capacity Constraint
+- Governance framework
+- Product: Correction-Capacity Platform
+Article thesis
+Institutional justice may be constrained not by model accuracy, but by correction capacity. As AI increases decision volume, unresolved harm can grow even when error rates fall.
+Product PRD
+md
+# Correction-Capacity Platform  ## Problem AI increases decision volume. Even a low error rate can produce more unresolved harm in absolute terms.  ## Solution A platform that tracks: - Decision volume - Error rate - Appeal eligibility - Actual appeals - Abandoned claims - Resolution delay - Unresolved harm  ## Core modules - Decision registry - Appeal registry - Correction queue - Resolution tracker - Harm dashboard - Capacity planner  ## Success metrics - Appeal rate - Resolution time - Abandoned claims - Unresolved harm - Correction capacity utilization
+AHA 3: Accountable coordination is the scarce resource
+Recommendation
+Thought leadership + product.
+Output needed
+- Article: The Accountable Coordination Constraint
+- Protocol: AgentAssure Commons
+- Product: Agent Assurance Commons
+Article thesis
+The scarce resource in an AI economy is not intelligence; it is accountable coordination. Intelligence can be copied. Accountability requires authority, evidence, recovery and governance.
+Product PRD
+md
+# Agent Assurance Commons  ## Problem Small organizations cannot afford enterprise AI security teams.  ## Solution A shared assurance layer that lets small organizations authorize, test, audit, revoke and recover from AI agents.  ## Core modules - Agent capability inventory - Policy templates - Evidence ledger - Adversarial test suite - Audit dashboard - Recovery playbook - Community governance  ## Success metrics - Organizations onboarded - Agent workflows tested - Policy templates published - Adversarial scenarios published - Audit-log completeness - Recovery-test completion
+AHA 4: Sovereignty is negotiable dependence
+Recommendation
+Thought leadership + product.
+Output needed
+- Article: Sovereign AI Infrastructure: Resilience Without Autarky
+- Architecture: Sovereign AI Stack
+- Product: Sovereign AI Infrastructure
+Article thesis
+Sovereignty is not self-sufficiency; it is the ability to sustain essential functions, negotiate dependencies and replace critical components.
+Product PRD
+md
+# Sovereign AI Infrastructure  ## Problem Communities and institutions depend on distant providers for AI, compute, data and identity.  ## Solution A sovereign AI stack that combines: - Local compute - Open models - Local data - Privacy-preserving inference - Public audit - Community governance - Maintenance fund  ## Core modules - Compute layer - Model layer - Data layer - Identity layer - Privacy layer - Governance layer - Maintenance layer  ## Success metrics - Uptime - Cost per inference - Data locality - Model replaceability - Community participation - Maintenance sustainability
+AHA 5: Public goods become more important
+Recommendation
+Thought leadership + grant.
+Output needed
+- Article: Public Goods in an Abundance Economy
+- Grant proposal: Public-Interest AI Infrastructure
+- Product: Public-Interest AI Infrastructure
+Article thesis
+Public goods may become more consequential when private goods become cheap. Shared complements—security, standards, credible knowledge and disease control—can determine whether abundant private output is useful.
+Grant proposal
+md
+# Public-Interest AI Infrastructure  ## Problem AI benefits are concentrated in large enterprises.  ## Solution A public-interest AI infrastructure that provides: - Open evaluation infrastructure - Shared security libraries - Public agent registries - Community-governed model commons - Public audit tools  ## Deliverables - Open-source infrastructure - Policy templates - Adversarial test suite - Audit dashboard - Recovery playbook - Pilot with small organizations - Public report  ## Budget $500,000–$1,000,000
+AHA 6: The next internet bargain is agency
+Recommendation
+Product + patent.
+Output needed
+- Article: The Post-Agentic Web Bargain
+- Protocol: Common Agents Ledger
+- Patent claims
+- Product: Common Agents Ledger
+Patent abstract
+text
+A system and method for a portable agent-authority protocol is provided. The system receives an agent request to access a resource, evaluates the request against an authority profile and consent scope, determines whether approval is required, records an action receipt, calculates a value split and enables revocation of authority. The system distinguishes reversible local actions from irreversible external effects and applies different controls to each.
+Core inventive mechanism
+text
+Agent Request   → Authority Profile   → Consent Scope   → Policy   → Approval   → Action   → Receipt   → Value Split   → Revocation
+Key claims
+text
+1. A computer-implemented method for portable agent authority, comprising:    a. receiving an agent request to access a resource;    b. evaluating the request against an authority profile;    c. evaluating the request against a consent scope;    d. determining whether approval is required;    e. recording an action receipt;    f. calculating a value split; and    g. enabling revocation of authority.  2. The method of claim 1, wherein the authority profile defines which agents may act for a person or organization.  3. The method of claim 1, wherein the consent scope defines resource access, purpose, duration, attribution and compensation.  4. The method of claim 1, wherein the action receipt includes a hash of the request, policy decision, approval decision and outcome.  5. The method of claim 1, wherein the value split includes a creator share, platform share and agent share.  6. The method of claim 1, wherein revocation of authority is immediate.
+AHA 7: Reservation conservation is the missing primitive
+Recommendation
+Patent + product.
+Output needed
+- Patent claims
+- PRD: Fund Operations Control Plane
+- Product: Reservation Conservation Engine
+Patent abstract
+text
+A system and method for reservation conservation during migration in a modular financial system is provided. The system identifies a reservation, identifies a migration event, determines whether the reservation should be preserved, migrated or terminated, prevents duplication, preserves reservation identity, owner, state, deadline, amount and completed-effect identifier, and generates an evidence record.
+Core inventive mechanism
+text
+Reservation   → Migration Event   → Conservation Decision   → Preservation / Migration / Termination   → Deduplication   → Evidence Record
+Key claims
+text
+1. A computer-implemented method for reservation conservation during migration in a modular financial system, comprising:    a. identifying a reservation;    b. identifying a migration event;    c. determining whether the reservation should be preserved, migrated or terminated;    d. preserving, migrating or terminating the reservation;    e. preventing duplication of the reservation;    f. preserving the reservation identity, owner, state, deadline, amount and completed-effect identifier; and    g. generating an evidence record.  2. The method of claim 1, wherein the reservation includes a shareholder election, redemption request, subscription commitment, pending distribution, voting reservation, corporate-action election or pending settlement.  3. The method of claim 1, wherein the migration event includes a module upgrade, module replacement, state migration or agent action.  4. The method of claim 1, wherein the reservation is preserved if the reservation has not expired and the reservation owner has not revoked the reservation.  5. The method of claim 1, wherein the evidence record includes a hash of the reservation, migration event and conservation decision.
+AHA 8: Effect reconciliation is the missing primitive
+Recommendation
+Patent + product.
+Output needed
+- Patent claims
+- PRD: Effect Reconciliation Engine
+- Product: Effect Reconciliation Engine
+Patent abstract
+text
+A system and method for effect reconciliation in agentic financial systems is provided. The system receives an intent to perform an external effect, generates a completed-effect identifier, dispatches the effect, receives a receipt or confirmation, associates the completed-effect identifier with the receipt or confirmation, preserves the identifier across migration or agent action, and generates an evidence record.
+Core inventive mechanism
+text
+Intent   → Completed-Effect Identifier   → Dispatch   → Receipt   → Confirmation   → Reconciliation   → Evidence Record
+Key claims
+text
+1. A computer-implemented method for effect reconciliation in agentic financial systems, comprising:    a. receiving an intent to perform an external effect;    b. generating a completed-effect identifier;    c. dispatching the external effect;    d. receiving a receipt or confirmation;    e. associating the completed-effect identifier with the receipt or confirmation;    f. preserving the completed-effect identifier across a migration or agent action; and    g. generating an evidence record.  2. The method of claim 1, wherein the external effect includes a payment, message, filing, redemption, corporate action or data update.  3. The method of claim 1, wherein the completed-effect identifier is used to prevent duplicate effects.  4. The method of claim 1, wherein the receipt or confirmation is stored in a tamper-evident evidence ledger.  5. The method of claim 1, wherein the evidence record includes a hash of the intent, completed-effect identifier, receipt and outcome.
+AHA 9: Agent treasuries are the missing primitive
+Recommendation
+Product + patent.
+Output needed
+- Paper: Autonomous Agent Treasuries
+- PRD: Agent Treasury Control Plane
+- Patent claims
+- Product: Agent Treasury Control Plane
+Patent abstract
+text
+A system and method for autonomous agent treasuries is provided. The system receives an agent-initiated financial action request, evaluates the request against a treasury policy, determines reserve availability, applies spend limits, determines whether human approval is required, dispatches the action using an idempotency key, generates a receipt, reconciles the completed effect and generates an evidence record.
+Core inventive mechanism
+text
+Agent Action Request   → Treasury Policy   → Reserve Check   → Spend Limit Check   → Approval Decision   → Idempotent Dispatch   → Receipt   → Effect Reconciliation   → Evidence Record   → Recovery
+Key claims
+text
+1. A computer-implemented method for autonomous agent treasuries, comprising:    a. receiving an agent-initiated financial action request;    b. evaluating the request against a treasury policy;    c. determining reserve availability;    d. applying one or more spend limits;    e. determining whether human approval is required;    f. dispatching the action using an idempotency key;    g. generating a receipt;    h. reconciling the completed effect; and    i. generating an evidence record.  2. The method of claim 1, wherein the treasury policy distinguishes reversible local actions from irreversible external effects.  3. The method of claim 1, wherein the reserve availability includes an operating reserve, emergency reserve, vendor-payment reserve, investment reserve, compliance reserve or recovery reserve.  4. The method of claim 1, wherein the spend limit includes a daily, weekly, monthly, per-counterparty, per-category or per-action limit.  5. The method of claim 1, wherein the idempotency key prevents duplicate effects.  6. The method of claim 1, wherein the evidence record includes a hash of the request, policy decision, approval decision, receipt and reconciliation result.  7. The method of claim 1, further comprising revoking agent authority and initiating recovery.
+AHA 10: Fund management is public infrastructure
+Recommendation
+Thought leadership + product.
+Output needed
+- Article: The Future of Fund Management as Public Infrastructure
+- Protocol: Fund Management Layer
+- Patent claims
+- Product: Fund Operations Control Plane
+Patent abstract
+text
+A system and method for a Fund Management Layer is provided. The system decomposes fund management into interoperable modules for issuance, compliance, custody, entitlement, reporting and settlement. The system maps logical functions to executable generations, interfaces and state-scope descriptors, preserves obligations, reservations and completed-effect identifiers across module replacement, and generates evidence records for agent actions.
+Core inventive mechanism
+text
+Fund Management Layer   → Fund Registry   → Version Control   → Obligation Registry   → Reservation Engine   → Effect Ledger   → Agent Control Plane   → Compliance Engine   → Settlement Engine   → Governance Engine
+Key claims
+text
+1. A computer-implemented method for a Fund Management Layer, comprising:    a. decomposing fund management into interoperable modules;    b. mapping logical functions to executable generations, interfaces and state-scope descriptors;    c. preserving obligations, reservations and completed-effect identifiers across module replacement;    d. generating evidence records for agent actions; and    e. enabling governance of the modules.  2. The method of claim 1, wherein the modules include fund registry, version control, obligation registry, reservation engine, effect ledger, agent control plane, compliance engine, settlement engine and governance engine.  3. The method of claim 1, wherein the state-scope descriptor distinguishes reversible local state from irreversible external effect state.  4. The method of claim 1, wherein the obligations include dividends, redemptions, subscriptions, voting rights, corporate actions and settlements.  5. The method of claim 1, wherein the reservations include shareholder elections, redemption requests, subscription commitments, pending distributions, voting reservations, corporate-action elections and pending settlements.  6. The method of claim 1, wherein the completed-effect identifiers are preserved to prevent duplicate effects.  7. The method of claim 1, wherein the evidence records include a hash of the request, policy decision, approval decision, receipt and reconciliation result.
+Coordination-prompt outputs
+1. Influence nodes
+md
+# Influence Nodes  ## Design A coordination system where humans retain influence without understanding every AI decision.  ## Mechanism - Human intention seeds the process - AI expands into solution space - Human influence nodes preserve agency - Final outcomes reflect human values  ## Core components - Intention registry - Influence node - Decision trace - Veto right - Appeal right - Correction capacity  ## Example A city uses an AI agent to allocate housing support. Residents set priorities. The agent explores allocation options. Residents retain veto over irreversible decisions.  ## Output Influence nodes preserve human agency without requiring full comprehension.
+2. Agency preservation
+md
+# Agency Preservation  ## Design A coordination system where AI can expand into incomprehensible solution space but humans retain veto power.  ## Mechanism - Human intention seeds the process - AI expands into solution space - Human veto preserves agency - Final outcomes reflect human values  ## Core components - Intention registry - Solution space - Veto right - Appeal right - Correction capacity  ## Example A hospital uses an AI agent to optimize care pathways. Clinicians retain veto over irreversible decisions.  ## Output Agency preservation ensures that AI expansion does not eliminate human control.
+3. Correction capacity
+md
+# Correction Capacity  ## Design A coordination system where correction capacity, not intelligence, is the binding constraint.  ## Mechanism - Decision volume increases - Error rate may fall - Unresolved harm may grow - Correction capacity becomes the binding constraint  ## Core components - Decision registry - Appeal registry - Correction queue - Resolution tracker - Harm dashboard - Capacity planner  ## Example A government uses AI to process benefits. Even a low error rate can produce more unresolved harm in absolute terms.  ## Output Correction capacity becomes the binding constraint.
+4. Public goods
+md
+# Public Goods  ## Design A coordination system where public goods become more important as private goods become cheap.  ## Mechanism - Private goods become cheap - Shared complements become more important - Public goods determine whether abundance is useful  ## Core components - Public compute - Public data - Public AI - Public security - Public standards - Public knowledge  ## Example AI makes content cheap, but credible knowledge becomes more important.  ## Output Public goods become more important as private goods become cheap.
+5. Sovereign infrastructure
+md
+# Sovereign Infrastructure  ## Design A coordination system where sovereignty is resilience, not autarky.  ## Mechanism - Essential functions are sustained - Dependencies are negotiable - Critical systems are replaceable - Continuity is preserved  ## Core components - Local compute - Open models - Local data - Privacy-preserving inference - Public audit - Community governance - Maintenance fund  ## Example A city uses local compute and open models while still using cloud services for non-critical workloads.  ## Output Sovereignty is resilience, not autarky.
+6. Intergenerational ownership
+md
+# Intergenerational Ownership  ## Design A coordination system where intergenerational ownership is preserved.  ## Mechanism - Long-term ownership - Intergenerational governance - Amendment rights - Cohort representation  ## Core components - Wealth fund - Governance charter - Cohort representation - Amendment process - Dispute resolution  ## Example A sovereign wealth fund holds productive assets for future generations.  ## Output Intergenerational ownership is preserved.
+7. Agent treasuries
+md
+# Agent Treasuries  ## Design A coordination system where agent treasuries preserve human agency.  ## Mechanism - Agent authority profile - Treasury policy - Reserve allocation - Spend limit - Approval workflow - Idempotent dispatch - Receipt - Effect reconciliation - Revocation - Recovery  ## Core components - Agent authority profile - Treasury policy engine - Reserve allocation - Spend limit - Approval workflow - Payment rail - Receipt generator - Effect reconciler - Revocation protocol - Recovery playbook  ## Example A nonprofit uses an agent to pay vendors within a spend limit. High-risk payments require approval.  ## Output Agent treasuries preserve human agency.
+8. Institutional resilience
+md
+# Institutional Resilience  ## Design A coordination system where correction capacity scales with decision volume.  ## Mechanism - Decision volume increases - Correction capacity scales - Unresolved harm is contained  ## Core components - Decision registry - Appeal registry - Correction queue - Resolution tracker - Harm dashboard - Capacity planner  ## Example A government uses AI to process benefits. Correction capacity scales with decision volume.  ## Output Institutional resilience is preserved.
+9. Public-interest AI
+md
+# Public-Interest AI  ## Design A coordination system where public goods are funded by automated value capture.  ## Mechanism - Automated value capture - Public goods funding - Community governance - Public audit  ## Core components - Value-capture protocol - Public-goods fund - Community governance - Public audit - Maintenance fund  ## Example AI agents pay a small fee for using public data or public compute.  ## Output Public goods are funded by automated value capture.
+10. Human flourishing
+md
+# Human Flourishing  ## Design A coordination system where human flourishing is the objective function.  ## Mechanism - Human intention seeds the process - AI expands into solution space - Human flourishing is the objective function - Final outcomes reflect human values  ## Core components - Intention registry - Flourishing metrics - Influence node - Veto right - Appeal right - Correction capacity  ## Example A city uses AI to allocate housing support. Residents set priorities. The agent explores allocation options. Residents retain veto over irreversible decisions.  ## Output Human flourishing is the objective function.
+Paper 3: AgentAssure Commons
+md
+# AgentAssure Commons: A Shared Assurance Layer for Trustworthy AI Agents in Small Organizations  ## Abstract  Small organizations increasingly want to use AI agents for intake, research, scheduling, procurement, donor communications and case management. But they lack the security teams, compliance capacity and technical expertise needed to determine whether an agent is safe.  This paper proposes AgentAssure Commons, an open, community-governed assurance layer for organizations deploying AI agents. The system provides a capability inventory, policy templates, a tamper-evident evidence ledger, an audit dashboard, an adversarial test suite and recovery playbooks.  The paper argues that agent safety requires an execution boundary, not merely a prompt filter. It distinguishes reversible local actions from irreversible external effects and applies different controls to each.  ## Keywords  Agent assurance, AI agents, small organizations, security, audit, evidence ledger, policy templates, adversarial testing, recovery, governance  ## JEL Classification  L31, L86, O33  ## 1. Introduction  AI agents are increasingly used by small organizations.  ## 2. Problem statement  Small organizations lack the security teams, compliance capacity and technical expertise needed to determine whether an agent is safe.  ## 3. AgentAssure Commons  AgentAssure Commons provides a capability inventory, policy templates, a tamper-evident evidence ledger, an audit dashboard, an adversarial test suite and recovery playbooks.  ## 4. Capability inventory  A capability inventory defines what an agent can access and do.  ## 5. Policy templates  Policy templates define controls for privacy, financial authority, external communications and irreversible actions.  ## 6. Evidence ledger  A tamper-evident evidence ledger records agent actions, authorizations, approvals and outcomes.  ## 7. Adversarial test suite  An adversarial test suite tests prompt injection, data exfiltration, privilege escalation and unauthorized external effects.  ## 8. Audit dashboard  An audit dashboard lets non-technical administrators inspect agent actions.  ## 9. Recovery playbook  A recovery playbook defines suspension, revocation, incident response and service continuity.  ## 10. Governance  Community governance ensures that the system remains open, inspectable and resilient.  ## 11. Conclusion  AgentAssure Commons provides a shared assurance layer for trustworthy AI agents in small organizations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    To pick up a draggable item, press the space bar.
+    While dragging, use the arrow keys to move the item.
+    Press space again to drop the item in its new position, or press escape to cancel.
+  
+
+
+
+
+

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Securities Journal — Onchain Capital Markets</title>
+  <meta name="description" content="Independent print and digital journal examining tokenisation, investor rights, asset servicing, stablecoins, agentic wallets, and institutional capital markets." />
+  <meta name="keywords" content="digital securities, tokenisation, tokenization, asset servicing, investor entitlements, DTCC, Broadridge, Robinhood Chain, Coinbase Agentic Wallets, x402, stablecoins, privacy-preserving compliance, 2027 institutional outlook" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Digital Securities Journal — Onchain Capital Markets" />
+  <meta property="og:description" content="Capital markets are moving onchain. Rights must move with them. Independent essays, 2027 symposia, market maps, and institutional outlooks." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digital Securities Journal — Onchain Capital Markets" />
+  <meta name="twitter:description" content="Capital markets are moving onchain. Rights must move with them." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Periodical",
+        "name": "Digital Securities Journal",
+        "description": "Independent print and digital publication covering tokenisation, investor entitlements, stablecoins, agentic wallets, and market infrastructure.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Digital Securities Journal",
+          "email": "Digitalsecuritiesjournal@proton.me"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "Future of Work in ASI Era",
+        "startDate": "2027-01-16",
+        "location": { "@type": "Place", "name": "St. Moritz, Switzerland" }
+      },
+      {
+        "@type": "Event",
+        "name": "The Frontier Stack Summit",
+        "startDate": "2027-02-26",
+        "location": { "@type": "Place", "name": "Bengaluru, India" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #FBF9F5;
+      --paper-warm: #F3EFE6;
+      --border: #E2DBD0;
+      --ink: #1C1917;
+      --muted: #57534E;
+      --lapis: #1E3A8A;
+      --bronze: #78350F;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Serif 4", Georgia, serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .display {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 0;
+    }
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(251, 249, 245, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      height: 68px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .seal {
+      width: 34px;
+      height: 34px;
+      background: var(--ink);
+      color: var(--paper);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+    }
+    nav { display: flex; gap: 22px; }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      font-size: 0.84rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      border: 1px solid var(--ink);
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--lapis); border-color: var(--lapis); }
+    .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--border); }
+    .btn-outline:hover { background: var(--paper-warm); color: var(--ink); border-color: var(--ink); }
+    .section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .surface { background: var(--paper-warm); border: 1px solid var(--border); padding: 24px; }
+    .card { border: 1px solid var(--border); padding: 22px; background: var(--paper); }
+    .card-link { display: block; text-decoration: none; color: inherit; }
+    .card-link:hover { border-color: var(--lapis); }
+    .cover-box {
+      aspect-ratio: 3 / 4;
+      max-width: 260px;
+      background: var(--paper-warm);
+      border: 1px solid var(--ink);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    input, select, textarea {
+      width: 100%;
+      min-height: 44px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      background: var(--paper);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+    footer { padding: 48px 0; font-size: 0.86rem; color: var(--muted); background: var(--paper-warm); }
+    .cookie-bar {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      left: 16px;
+      max-width: 520px;
+      margin-left: auto;
+      background: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.8rem;
+      z-index: 40;
+    }
+    @media (max-width: 860px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <a href="#top" class="brand"><span class="seal">DSJ</span> Digital Securities Journal</a>
+      <nav aria-label="Primary">
+        <a href="#latest">Latest</a>
+        <a href="#editions">Editions</a>
+        <a href="#events">Events</a>
+        <a href="#resources">Resources</a>
+        <a href="#newsletter">Newsletter</a>
+      </nav>
+      <a href="#newsletter" class="btn">Subscribe</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="section">
+      <div class="container">
+        <div class="mono" style="color:var(--bronze);">The Operating System of Onchain Capital Markets</div>
+        <h1 style="font-size:clamp(2.2rem, 4.2vw, 3.5rem); max-width:19ch; margin-top:12px;">Capital markets are moving onchain. Rights must move with them.</h1>
+        <p style="max-width:62ch; font-size:1.1rem; color:var(--muted); margin:18px 0 28px;">An independent print and digital journal examining tokenisation, investor ownership, asset servicing, stablecoins, agentic wallets, and institutional digital finance.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#desks" class="btn">Explore Launch Essays</a>
+          <a href="#editions" class="btn btn-outline">DSJ WEF 2027 Special Edition</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest" class="section">
+      <div class="container grid-2">
+        <div>
+          <div class="mono" style="color:var(--lapis);">Lead Analysis · Markets &amp; Infrastructure · Verified 25 Nov 2026</div>
+          <h2 style="font-size:2rem; margin:12px 0 14px;">Tokenisation Has Launched. Asset Servicing Is the Next Test.</h2>
+          <p>On 28 October 2026, DTCC launched its Tokenization Service across the Canton Network (CIP-56) and private Hyperledger Besu (ERC-20) under its December 2025 SEC no-action letter, while Broadridge reported $7.6 trillion in October Distributed Ledger Repo volume ($345B ADV). In retail-facing rails, Robinhood Chain (Arbitrum Orbit L2, live 1 Jul 2026) expanded 24/7 ERC-20 Stock Tokens outside the U.S. Yet minting tokens leaves the core question open: what authoritative entitlement ledger governs dividends, elections, ex-date claims, and cross-chain migrations?</p>
+        </div>
+        <aside class="surface">
+          <div class="mono" style="color:var(--bronze);">Verified Market Ledger (25 Nov 2026)</div>
+          <h3 style="font-size:1.35rem; margin:8px 0 14px;">Measurement Basis &amp; Key Rollouts</h3>
+          <p style="font-size:0.88rem; margin:0 0 10px;"><strong>DTCC Tokenization (28 Oct 2026):</strong> 20 participants, 34 initial securities, ~$30T eligible DTC custody pool under Cede &amp; Co. Digital Omnibus Account.</p>
+          <p style="font-size:0.88rem; margin:0 0 10px;"><strong>Broadridge DLR (Oct 2026):</strong> $7.6T monthly notional repo flow ($345B ADV) — velocity flow, not static AUM.</p>
+          <p style="font-size:0.88rem; margin:0 0 10px;"><strong>Coinbase Agentic Wallets &amp; x402 (11 Feb 2026):</strong> AWS Nitro Enclave isolation + HTTP 402 USDC rails on Base.</p>
+          <p style="font-size:0.88rem; margin:0;"><strong>Robinhood Chain &amp; Agents (Jul–Sep 2026):</strong> Arbitrum Orbit L2 mainnet, 24/7 Stock Tokens, and HOOD Summit gated agent accounts.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="editions" class="section">
+      <div class="container grid-2">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div class="cover-box">
+            <div>
+              <div class="mono" style="color:var(--muted);">Special Print Edition · Winter 2026–27</div>
+              <h3 style="font-size:1.45rem; margin-top:8px;">DSJ WEF 2027 Special Edition</h3>
+            </div>
+            <p style="font-style:italic; font-size:1.1rem;">The Architecture of Investor Rights &amp; Onchain Servicing</p>
+            <div class="mono" style="color:var(--bronze);">Davos &amp; St. Moritz Reading Edition</div>
+          </div>
+          <p style="font-size:0.8rem; color:var(--muted); margin:0;">Independent publication for the institutional digital-assets community; neither affiliated with nor endorsed by the World Economic Forum.</p>
+
+          <div class="surface">
+            <div class="mono" style="color:var(--muted);">Founding Archive · Editable Placeholder</div>
+            <h4 style="font-size:1.15rem; margin-top:6px;">DSJ 2019 Inaugural Issue</h4>
+            <p style="font-size:0.85rem; color:var(--muted); margin:6px 0 0;">Archival thumbnail placeholder reserved for the 2019 founding print monograph.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="mono" style="color:var(--muted);">Print-to-Digital Table of Contents</div>
+          <h2 style="font-size:2rem; margin:8px 0 18px;">Six Launch Features</h2>
+          <div class="card" style="margin-bottom:12px;"><strong>01.</strong> Tokenisation Has Launched. Asset Servicing Is the Next Test. <span class="mono" style="color:var(--lapis);">· Markets</span></div>
+          <div class="card" style="margin-bottom:12px;"><strong>02.</strong> Token Balances Are Not Investor Rights <span class="mono" style="color:var(--lapis);">· Ownership &amp; Governance</span></div>
+          <div class="card" style="margin-bottom:12px;"><strong>03.</strong> Privacy-Preserving Compliance Protocols <span class="mono" style="color:var(--lapis);">· Infrastructure</span></div>
+          <div class="card" style="margin-bottom:12px;"><strong>04.</strong> Settlement Finality Is a Stack, Not a Timestamp <span class="mono" style="color:var(--lapis);">· Infrastructure</span></div>
+          <div class="card" style="margin-bottom:12px;"><strong>05.</strong> The Future of Fund Management as Public Infrastructure <span class="mono" style="color:var(--lapis);">· Opinion</span></div>
+          <div class="card"><strong>06.</strong> Agentic Wallets, x402 &amp; Treasuries Need Mandates <span class="mono" style="color:var(--lapis);">· Infrastructure</span></div>
+          <div style="margin-top:20px;">
+            <a href="mailto:Digitalsecuritiesjournal@proton.me?subject=Print%20Edition%20or%20Sponsorship%20Enquiry" class="btn">Enquire for Print &amp; Sponsorship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="section">
+      <div class="container">
+        <div class="mono" style="color:var(--bronze);">2027 Symposia &amp; Institutional Briefings</div>
+        <h2 style="font-size:2rem; margin:8px 0 28px;">Events &amp; Roadshows</h2>
+        <div class="grid-3">
+          <article class="surface">
+            <div class="mono" style="color:var(--lapis);">16 Jan 2027 · St. Moritz, Switzerland</div>
+            <h3 style="font-size:1.35rem; margin:10px 0;">Future of Work in ASI Era</h3>
+            <p style="font-size:0.9rem; color:var(--muted);">Alpine executive roundtable on autonomous agents, programmable treasury mandates, and fiduciary oversight.</p>
+            <a href="mailto:Digitalsecuritiesjournal@proton.me?subject=RSVP:%20Future%20of%20Work%20in%20ASI%20Era" class="btn-outline btn" style="margin-top:12px;">Request Invitation</a>
+          </article>
+          <article class="surface">
+            <div class="mono" style="color:var(--lapis);">26 Feb 2027 · Bengaluru, India</div>
+            <h3 style="font-size:1.35rem; margin:10px 0;">The Frontier Stack Summit</h3>
+            <p style="font-size:0.9rem; color:var(--muted);">Annual infrastructure summit on token entitlement governance, selective-disclosure KYC, and agentic payment rails.</p>
+            <a href="mailto:Digitalsecuritiesjournal@proton.me?subject=RSVP:%20The%20Frontier%20Stack%20Summit" class="btn-outline btn" style="margin-top:12px;">Request Invitation</a>
+          </article>
+          <article class="card" style="border-color:var(--ink);">
+            <div class="mono" style="color:var(--bronze);">Private Institutional Briefings</div>
+            <h3 style="font-size:1.35rem; margin:10px 0;">Request a Roadshow</h3>
+            <p style="font-size:0.9rem; color:var(--muted);">Host the DSJ editorial team at your custodian, bank, or regulatory forum with print editions and technical briefings.</p>
+            <a href="mailto:Digitalsecuritiesjournal@proton.me?subject=Roadshow%20Request" class="btn" style="margin-top:12px;">Book a Roadshow</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="desks" class="section">
+      <div class="container">
+        <div class="mono" style="color:var(--muted);">Verified Editorial Archive</div>
+        <h2 style="font-size:2rem; margin:8px 0 28px;">Markets · Infrastructure · Ownership &amp; Governance</h2>
+        <div class="grid-3">
+          <article class="card"><div class="mono" style="color:var(--lapis);">Markets · Analysis</div><h3 style="font-size:1.25rem; margin:8px 0;">Tokenisation Has Launched. Asset Servicing Is the Next Test.</h3><p style="font-size:0.88rem; color:var(--muted);">DTCC Canton/Besu, Broadridge $7.6T DLR flow, and Robinhood Chain 24/7 equities demand unified corporate-action state machines.</p></article>
+          <article class="card"><div class="mono" style="color:var(--lapis);">Ownership · Working Paper</div><h3 style="font-size:1.25rem; margin:8px 0;">Token Balances Are Not Investor Rights</h3><p style="font-size:0.88rem; color:var(--muted);">Separating live balances from frozen record-date snapshots, pending elections, idempotent payout logs, and UCC Art. 8/12 boundaries.</p></article>
+          <article class="card"><div class="mono" style="color:var(--lapis);">Infrastructure · Architecture</div><h3 style="font-size:1.25rem; margin:8px 0;">Privacy-Preserving Compliance Protocols</h3><p style="font-size:0.88rem; color:var(--muted);">Aligning W3C VCDM v2.0 (May 2025) and FATF Rec. 16 (June 2025) with query budgets preventing adaptive threshold erosion.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="section">
+      <div class="container">
+        <div class="mono" style="color:var(--lapis);">Market Maps · Infographics · Institutional Research</div>
+        <h2 style="font-size:2rem; margin:8px 0 24px;">Onchain Capital Markets Resources &amp; 2027 Outlooks</h2>
+
+        <div class="grid-2" style="margin-bottom:36px;">
+          <div class="surface">
+            <div class="mono" style="color:var(--bronze); margin-bottom:8px;">Infographic 01 · Architecture Stack</div>
+            <svg viewBox="0 0 600 280" style="width:100%; height:auto; background:#FBF9F5; border:1px solid #E2DBD0;" role="img" aria-label="Onchain Capital Markets 5-Layer Architecture Stack">
+              <rect x="16" y="14" width="568" height="44" fill="#F3EFE6" stroke="#1C1917"/><text x="28" y="33" fill="#1E3A8A" font-size="9.5" font-family="IBM Plex Mono, monospace">05. AGENTIC WALLETS &amp; MANDATES — Coinbase TEE Enclaves · x402 · Robinhood Agents</text><text x="28" y="49" fill="#57534E" font-size="11" font-family="Georgia, serif">Per-session spend caps, allowlists, dual-phase receipt confirmation</text>
+              <rect x="16" y="66" width="568" height="44" fill="#FBF9F5" stroke="#1C1917"/><text x="28" y="85" fill="#78350F" font-size="9.5" font-family="IBM Plex Mono, monospace">04. ENTITLEMENT &amp; ASSET SERVICING — Snapshots (S_c) · Elections · Payout Ledger (D)</text><text x="28" y="101" fill="#57534E" font-size="11" font-family="Georgia, serif">Ex-date market claims, tax withholding, cross-chain conservation</text>
+              <rect x="16" y="118" width="568" height="44" fill="#F3EFE6" stroke="#1C1917"/><text x="28" y="137" fill="#1E3A8A" font-size="9.5" font-family="IBM Plex Mono, monospace">03. PRIVACY COMPLIANCE — W3C VCDM v2.0 · SD-JWT · FATF Rec. 16</text><text x="28" y="153" fill="#57534E" font-size="11" font-family="Georgia, serif">Zero-knowledge eligibility &amp; sanctions proofs with bounded query budgets</text>
+              <rect x="16" y="170" width="568" height="44" fill="#FBF9F5" stroke="#1C1917"/><text x="28" y="189" fill="#78350F" font-size="9.5" font-family="IBM Plex Mono, monospace">02. SETTLEMENT RAILS — Canton · Besu · Arbitrum Orbit · Wholesale CBDC / Stablecoins</text><text x="28" y="205" fill="#57534E" font-size="11" font-family="Georgia, serif">Par cash-leg finality + multi-ledger atomic settlement</text>
+              <rect x="16" y="222" width="568" height="44" fill="#1C1917"/><text x="28" y="241" fill="#E2DBD0" font-size="9.5" font-family="IBM Plex Mono, monospace">01. LEGAL ANCHOR — UCC Art. 8 &amp; 12 · DTC Digital Omnibus · EU DLT Pilot Regime</text><text x="28" y="257" fill="#FBF9F5" font-size="11" font-family="Georgia, serif">Statutory ownership &amp; insolvency-protected settlement finality</text>
+            </svg>
+          </div>
+          <div class="surface">
+            <div class="mono" style="color:var(--lapis); margin-bottom:8px;">Tokenisation, Stablecoins &amp; Agentic Wallets</div>
+            <ul style="margin:0; padding-left:18px; font-size:0.9rem; line-height:1.85;">
+              <li><a href="https://www.bis.org/publ/arpdf/ar2026e3.pdf" target="_blank" rel="noopener">BIS Annual Economic Report 2026, Ch. III: Innovation Beyond Stablecoins</a></li>
+              <li><a href="https://www.bis.org/publ/work1335.htm" target="_blank" rel="noopener">BIS WP No. 1335: Tokenomics and Blockchain Fragmentation (Mar 2026)</a></li>
+              <li><a href="https://www.bis.org/publ/work1340.htm" target="_blank" rel="noopener">BIS WP No. 1340: Stablecoin Flows and Spillovers to FX Markets (Mar 2026)</a></li>
+              <li><a href="https://www.bis.org/publ/bppdf/bispap159.htm" target="_blank" rel="noopener">BIS Papers No. 159: Global Survey on CBDCs and Crypto</a></li>
+              <li><a href="https://www.dtcc.com/dtcc-connection/articles/2026/october/28/dtcc-tokenization-service" target="_blank" rel="noopener">DTCC Tokenization Service Production Specifications (28 Oct 2026)</a></li>
+              <li><a href="https://www.esma.europa.eu/press-news/esma-news/esma-proposes-improvements-dlt-pilot-regime" target="_blank" rel="noopener">ESMA Review of the EU DLT Pilot Regime (25 Jun 2025)</a></li>
+              <li><a href="https://www.w3.org/TR/vc-data-model-2.0/" target="_blank" rel="noopener">W3C Verifiable Credentials Data Model v2.0 (15 May 2025)</a></li>
+              <li><a href="https://www.coinbase.com/developer-platform/discover/launches/agentic-wallets" target="_blank" rel="noopener">Coinbase Developer Platform: Agentic Wallets &amp; x402 (11 Feb 2026)</a></li>
+              <li><a href="https://www.x402.org/" target="_blank" rel="noopener">x402 Protocol Specification (HTTP 402 Machine Payments)</a></li>
+              <li><a href="https://newsroom.aboutrobinhood.com/" target="_blank" rel="noopener">Robinhood Newsroom: Robinhood Chain, Stock Tokens &amp; Robinhood Agents (2026)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.5rem; margin:0 0 16px;">Verified 2027 Institutional Global Outlooks (16 Reports)</h3>
+        <div class="grid-3">
+          <a class="card card-link" href="https://www.jpmorgan.com/content/dam/jpmorgan/documents/wealth-management/outlook-2027.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">J.P. Morgan Private Bank</div><strong>Wealth Outlook 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://am.jpmorgan.com/content/dam/jpm-am-aem/americas/us/en/insights/market-insights/investment-outlooks/2027/2027%20Year-Ahead%20Investment%20Outlook.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">J.P. Morgan Asset Mgmt</div><strong>2027 Year-Ahead Investment Outlook (PDF)</strong></a>
+          <a class="card card-link" href="https://www.gspublishing.com/content/research/en/reports/2026/11/12/24403184-34ea-4419-9f7a-cba7b7c8ddbd.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Goldman Sachs Research</div><strong>Global Equity Strategy 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://www.morganstanley.com/insights/articles/global-economic-outlook-2027" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Morgan Stanley</div><strong>2027 Global Economic Outlook</strong></a>
+          <a class="card card-link" href="https://docfinder.bnpparibas-am.com/api/files/a8287df0-58d8-4fb5-8306-80cc87d7cefd" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">BNP Paribas AM</div><strong>Investment Outlook 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://www.blackrock.com/us/financial-professionals/literature/market-commentary/private-markets-outlook.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">BlackRock</div><strong>Private Markets Outlook 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://www.schroders.com/en/global/individual/" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Schroders</div><strong>Multi-Asset 2027 Outlook</strong></a>
+          <a class="card card-link" href="https://www.columbiathreadneedleus.com/binaries/content/assets/cti-blog-spa/2026/november-articles/11.17.26-cross-macro-year-end-outlook.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Columbia Threadneedle</div><strong>2027 Macroeconomic Outlook (PDF)</strong></a>
+          <a class="card card-link" href="https://think.ing.com/uploads/pdf-replacements/Rates_outlook_2027_%28002%29.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">ING Think</div><strong>Rates Outlook 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://assets.ctfassets.net/1u811bvgvthc/6o94LN71x3h8XJy0aDd5Af/597f80f9bdf0bd932b7c89e0122c5d90/261111_-_FX_Outlook_2027_-_A_weak_euro_in_2027.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">ABN AMRO</div><strong>FX Outlook 2027 (PDF)</strong></a>
+          <a class="card card-link" href="https://lnkd.in/gAPaHGKB" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">LBBW Research</div><strong>Annual Outlook 2027</strong></a>
+          <a class="card card-link" href="https://www.mercer.com/en-us/insights/investments/market-outlook-and-trends/economic-and-market-outlook/" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Mercer</div><strong>2027 Economic &amp; Market Outlook</strong></a>
+          <a class="card card-link" href="https://www.allspringglobal.com/globalassets/campaigns/2027-investment-outlook/2027-investment-outlook.pdf?view=1" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Allspring Global</div><strong>2027 Investment Outlook (PDF)</strong></a>
+          <a class="card card-link" href="https://www.bmo.com/dam_asset/asset/7971043a-3b13-4375-a28e-863a0fe58136/2027-Long-Term-Outlook.pdf" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">BMO Wealth</div><strong>2027 Long-Term Outlook (PDF)</strong></a>
+          <a class="card card-link" href="https://www.dowjones.com/business-intelligence/blog/prospects-for-the-global-economy-in-2027/" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">Dow Jones</div><strong>Prospects for Global Economy 2027</strong></a>
+          <a class="card card-link" href="https://www.spglobal.com/ratings/en/regulatory/article/economic-outlook-asia-pacific-q1-2027-staying-strong-s101718495" target="_blank" rel="noopener"><div class="mono" style="color:var(--bronze);">S&amp;P Global (Browser Access)</div><strong>Asia-Pacific Q1 2027 Outlook</strong></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section">
+      <div class="container grid-2">
+        <div class="surface">
+          <div class="mono" style="color:var(--bronze);">Mailing List Subscription</div>
+          <h2 style="font-size:1.8rem; margin:8px 0 12px;">Subscribe to the Journal</h2>
+          <p style="font-size:0.9rem; color:var(--muted);">Receive print edition releases, verified market-infrastructure briefs, and 2027 symposium invitations.</p>
+          <form id="static-sub-form" style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+            <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off" />
+            <input type="email" id="static-email" required placeholder="name@institution.com" />
+            <button type="submit" class="btn">Subscribe to Mailing List</button>
+            <div id="static-sub-status" style="font-size:0.85rem; color:var(--lapis);"></div>
+          </form>
+        </div>
+        <div class="card">
+          <div class="mono" style="color:var(--lapis);">Automated Editorial Wire</div>
+          <h3 style="font-size:1.55rem; margin:8px 0 12px;">Live Newsletter Scraper</h3>
+          <p style="font-size:0.9rem; color:var(--muted);">Connects to the DSJ backend <code>/api/newsletter/scrape</code> &amp; <code>/api/newsletter/generate</code> endpoints to fetch live SEC, BIS, and CoinDesk feeds and compile a source-linked digest.</p>
+          <button type="button" id="static-scrape-btn" class="btn" style="margin-top:8px;">Fetch Live Dispatch</button>
+          <pre id="static-digest-out" style="margin-top:14px; white-space:pre-wrap; font-size:0.82rem; background:var(--paper-warm); padding:12px; border:1px solid var(--border); display:none;"></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="policies" class="section" style="border-bottom:none;">
+      <div class="container grid-3">
+        <div id="privacy-policy" class="card">
+          <div class="mono" style="color:var(--bronze);">Governance</div>
+          <h3 style="font-size:1.25rem; margin:8px 0;">Privacy Policy</h3>
+          <p style="font-size:0.86rem; color:var(--muted);">Data minimisation aligned with GDPR. We collect only email and role details voluntarily submitted for subscriptions or enquiries, operate zero ad trackers, and honour deletion requests via <a href="mailto:Digitalsecuritiesjournal@proton.me">Digitalsecuritiesjournal@proton.me</a>.</p>
+        </div>
+        <div id="editorial-policy" class="card">
+          <div class="mono" style="color:var(--lapis);">Independence Charter</div>
+          <h3 style="font-size:1.25rem; margin:8px 0;">Editorial Policy</h3>
+          <p style="font-size:0.86rem; color:var(--muted);">Reporting, Analysis, Opinion, Working Papers, and Sponsored Content are strictly separated. Commercial underwriting never influences editorial coverage. Independent publication; neither affiliated with nor endorsed by the World Economic Forum.</p>
+        </div>
+        <div id="terms" class="card">
+          <div class="mono" style="color:var(--muted);">Terms &amp; Contact</div>
+          <h3 style="font-size:1.25rem; margin:8px 0;">Terms &amp; Sponsorship</h3>
+          <p style="font-size:0.86rem; color:var(--muted);">Content is provided for informational and scholarly research only and does not constitute financial or legal advice. Sponsorship, roadshow, and editorial enquiries: <a href="mailto:Digitalsecuritiesjournal@proton.me">Digitalsecuritiesjournal@proton.me</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <span>Digital Securities Journal — The operating system of onchain capital markets</span>
+      <span>Contact: <a href="mailto:Digitalsecuritiesjournal@proton.me">Digitalsecuritiesjournal@proton.me</a></span>
+    </div>
+  </footer>
+
+  <div class="cookie-bar" id="cookie-bar">
+    <span>Essential storage only — zero third-party ad trackers. <a href="#privacy-policy">Privacy Policy</a></span>
+    <button type="button" class="btn" style="min-height:36px; padding:6px 12px;" onclick="document.getElementById('cookie-bar').style.display='none'">Acknowledge</button>
+  </div>
+
+  <script>
+    document.getElementById('static-sub-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var email = document.getElementById('static-email').value.trim();
+      var status = document.getElementById('static-sub-status');
+      if (!email || email.indexOf('@') === -1) {
+        status.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      try {
+        var r = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, role: 'Reader' })
+        });
+        var d = await r.json();
+        status.textContent = d.message || 'Subscribed to Digital Securities Journal.';
+      } catch (err) {
+        status.textContent = 'Static preview mode: write to Digitalsecuritiesjournal@proton.me to subscribe.';
+      }
+    });
+
+    document.getElementById('static-scrape-btn').addEventListener('click', async function () {
+      var out = document.getElementById('static-digest-out');
+      out.style.display = 'block';
+      out.textContent = 'Fetching live SEC, BIS, and CoinDesk feeds...';
+      try {
+        var s = await fetch('/api/newsletter/scrape');
+        var sd = await s.json();
+        var g = await fetch('/api/newsletter/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: sd.items || [] })
+        });
+        var gd = await g.json();
+        out.textContent = gd.markdown || 'No headlines returned.';
+      } catch (err) {
+        out.textContent = 'Host with server.ts running to enable live server-side RSS scraping and AI newsletter compilation.';
+      }
+    });
+  </script>
+</body>
+</html>
