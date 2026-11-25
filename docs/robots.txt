@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://agentzeta.github.io/digital-securities-journal-page/sitemap.xml
