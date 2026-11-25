@@ -59,6 +59,11 @@ export const NewsletterDesk: React.FC = () => {
           website: websiteTrap,
         }),
       });
+      const isJson = (resp.headers.get('content-type') || '').includes('application/json');
+      if (!isJson) {
+        setSubscribeErr(`Static hosting mode: email ${CONTACT_EMAIL} directly to join the mailing list.`);
+        return;
+      }
       const data = await resp.json();
       if (!resp.ok) {
         setSubscribeErr(data.error || 'Unable to process subscription.');
@@ -67,7 +72,7 @@ export const NewsletterDesk: React.FC = () => {
         setEmail('');
       }
     } catch {
-      setSubscribeErr('Network error while subscribing. Email Digitalsecuritiesjournal@proton.me directly.');
+      setSubscribeErr(`Network error while subscribing. Email ${CONTACT_EMAIL} directly.`);
     } finally {
       setSubmitting(false);
     }
@@ -78,6 +83,13 @@ export const NewsletterDesk: React.FC = () => {
     setScraperError(null);
     try {
       const resp = await fetch('/api/newsletter/scrape');
+      const isJson = (resp.headers.get('content-type') || '').includes('application/json');
+      if (!isJson) {
+        setScraperError(
+          `Live server-side RSS scraping requires the Node backend; this static GitHub Pages build serves archival editions. Enquiries: ${CONTACT_EMAIL}`
+        );
+        return [];
+      }
       const data = await resp.json();
       if (!resp.ok) {
         setScraperError(data.error || 'Failed to fetch live feeds.');

@@ -26,7 +26,25 @@ export default function App() {
   const [activeView, setActiveView] = useState<ActiveView>(() => {
     if (typeof window === 'undefined') return 'journal';
     const path = window.location.pathname;
-    if (path !== '/' && path !== '/index.html') return 'not-found';
+    const isRepoRoot =
+      path === '/' ||
+      path === '/index.html' ||
+      path === '/digital-securities-journal-page' ||
+      path === '/digital-securities-journal-page/' ||
+      path === '/digital-securities-journal-page/index.html';
+    if (!isRepoRoot) return 'not-found';
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get('view');
+    if (
+      viewParam === 'events' ||
+      viewParam === 'resources' ||
+      viewParam === 'standards' ||
+      viewParam === 'privacy' ||
+      viewParam === 'editorial' ||
+      viewParam === 'terms'
+    ) {
+      return viewParam;
+    }
     const hash = window.location.hash;
     if (hash === '#privacy-policy') return 'privacy';
     if (hash === '#editorial-policy') return 'editorial';
@@ -36,7 +54,13 @@ export default function App() {
   });
 
   const [selectedDesk, setSelectedDesk] = useState<'All' | DeskId>('All');
-  const [activeArticleId, setActiveArticleId] = useState<string | null>(null);
+  const [activeArticleId, setActiveArticleId] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null;
+    const slug = new URLSearchParams(window.location.search).get('article');
+    if (!slug) return null;
+    const match = LAUNCH_ARTICLES.find((a) => a.slug === slug || a.id === slug);
+    return match ? match.id : null;
+  });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Subscribe Modal (Primary CTA)
@@ -86,6 +110,24 @@ export default function App() {
   const activeArticle: Article | undefined = LAUNCH_ARTICLES.find(
     (a) => a.id === activeArticleId
   );
+
+  useEffect(() => {
+    if (activeArticle) {
+      document.title = `${activeArticle.title} | Digital Securities Journal`;
+      return;
+    }
+    const titles: Record<ActiveView, string> = {
+      journal: 'Digital Securities Journal — Onchain Capital Markets',
+      events: '2027 Events & Roadshows | Digital Securities Journal',
+      resources: 'Onchain Capital Markets Resources & 2027 Outlooks | Digital Securities Journal',
+      standards: 'Token Entitlement & Privacy Standards | Digital Securities Journal',
+      privacy: 'Privacy Policy | Digital Securities Journal',
+      editorial: 'Editorial Policy | Digital Securities Journal',
+      terms: 'Terms & Conditions | Digital Securities Journal',
+      'not-found': '404 Folio Not Found | Digital Securities Journal',
+    };
+    document.title = titles[activeView];
+  }, [activeView, activeArticle]);
 
   const filteredArticles =
     selectedDesk === 'All'
@@ -370,7 +412,10 @@ export default function App() {
           <PolicyPages
             page={activeView}
             onBackToJournal={() => {
-              window.history.replaceState(null, '', '/');
+              const baseHome = window.location.pathname.startsWith('/digital-securities-journal-page')
+                ? '/digital-securities-journal-page/'
+                : '/';
+              window.history.replaceState(null, '', baseHome);
               openTopView('journal');
             }}
           />

@@ -88,15 +88,23 @@ export interface ExternalReport {
   summary: string;
 }
 
+import logoImg from '../assets/images/dsj_logo_mark_1795597966594.jpg';
+import heroImg from '../assets/images/dsj_hero_clearinghouse_1795594466704.jpg';
+import servicingImg from '../assets/images/dsj_asset_servicing_1795594466292.jpg';
+import privacyImg from '../assets/images/dsj_privacy_architecture_1795594466451.jpg';
+import wef2027Img from '../assets/images/dsj_wef_2027_cover_1795597967023.jpg';
+import inaugural2019Img from '../assets/images/dsj_2019_inaugural_cover_1795597967780.jpg';
+import roadshowImg from '../assets/images/dsj_roadshow_briefing_1795597968270.jpg';
+
 export const CONTACT_EMAIL = 'Digitalsecuritiesjournal@proton.me';
 
-export const LOGO_IMAGE = '/src/assets/images/dsj_logo_mark_1795597966594.jpg';
-export const HERO_IMAGE = '/src/assets/images/dsj_hero_clearinghouse_1795594466704.jpg';
-export const SERVICING_IMAGE = '/src/assets/images/dsj_asset_servicing_1795594466292.jpg';
-export const PRIVACY_IMAGE = '/src/assets/images/dsj_privacy_architecture_1795594466451.jpg';
-export const WEF_2027_COVER = '/src/assets/images/dsj_wef_2027_cover_1795597967023.jpg';
-export const INAUGURAL_2019_COVER = '/src/assets/images/dsj_2019_inaugural_cover_1795597967780.jpg';
-export const ROADSHOW_IMAGE = '/src/assets/images/dsj_roadshow_briefing_1795597968270.jpg';
+export const LOGO_IMAGE = logoImg;
+export const HERO_IMAGE = heroImg;
+export const SERVICING_IMAGE = servicingImg;
+export const PRIVACY_IMAGE = privacyImg;
+export const WEF_2027_COVER = wef2027Img;
+export const INAUGURAL_2019_COVER = inaugural2019Img;
+export const ROADSHOW_IMAGE = roadshowImg;
 
 export const VERIFIED_MARKET_FACTS: VerifiedFactRow[] = [
   {

@@ -337,25 +337,31 @@ app.get('/robots.txt', (req, res) => {
 });
 
 app.get('/sitemap.xml', (req, res) => {
-  const baseUrl = process.env.APP_URL || `${req.protocol}://${req.get('host')}`;
-  const urls = [
-    '/',
-    '/#editions',
-    '/#events',
-    '/#resources',
-    '/#newsletter',
-    '/#privacy-policy',
-    '/#editorial-policy',
-    '/#terms',
+  const baseUrl = (process.env.APP_URL || `${req.protocol}://${req.get('host')}`).replace(/\/$/, '');
+  const entries = [
+    { path: '/', changefreq: 'daily', priority: '1.0' },
+    { path: '/?view=resources', changefreq: 'weekly', priority: '0.9' },
+    { path: '/?view=events', changefreq: 'weekly', priority: '0.9' },
+    { path: '/?view=standards', changefreq: 'monthly', priority: '0.9' },
+    { path: '/?article=tokenisation-has-launched-asset-servicing-is-the-next-test', changefreq: 'monthly', priority: '0.9' },
+    { path: '/?article=token-balances-are-not-investor-rights', changefreq: 'monthly', priority: '0.9' },
+    { path: '/?article=privacy-preserving-compliance-protocols', changefreq: 'monthly', priority: '0.8' },
+    { path: '/?article=settlement-finality-is-a-stack-not-a-timestamp', changefreq: 'monthly', priority: '0.8' },
+    { path: '/?article=future-of-fund-management-as-public-infrastructure', changefreq: 'monthly', priority: '0.8' },
+    { path: '/?article=agent-treasuries-need-mandates-not-master-keys', changefreq: 'monthly', priority: '0.8' },
+    { path: '/?view=editorial', changefreq: 'yearly', priority: '0.5' },
+    { path: '/?view=privacy', changefreq: 'yearly', priority: '0.4' },
+    { path: '/?view=terms', changefreq: 'yearly', priority: '0.4' },
   ];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls
+${entries
   .map(
-    (u) => `  <url>
-    <loc>${baseUrl}${u}</loc>
+    (e) => `  <url>
+    <loc>${baseUrl}${e.path}</loc>
     <lastmod>2026-11-25</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>${e.changefreq}</changefreq>
+    <priority>${e.priority}</priority>
   </url>`
   )
   .join('\n')}
